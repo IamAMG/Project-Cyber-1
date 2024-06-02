@@ -8,7 +8,7 @@ def check_password_complexity(password):
     uppercase_criteria = bool(re.search(r'[A-Z]',password))
     lowercase_criteria = bool(re.search(r'[a-z]',password))
     digit_criteria = bool(re.search(r'\d', password))
-    special_char_criteria = bool(re.search(r'[!@#$%&*(),.":{}<>]', password))
+    special_char_criteria = bool(re.search(r'[!@#$%&*(),.:{}<>]', password))
 
 
     # Assessment of  the strength of the password based on the criteria
@@ -26,9 +26,9 @@ def check_password_complexity(password):
         if not digit_criteria:
             feedback += "- Include at least one digit\n"
         if not special_char_criteria:
-            feedback += "- Include at least one special character (!@#$%&*(),.":{}<>)\n"
+            feedback += "- Include at least one special character (!@#$%&*(),.:{}<>)\n"
 
-         return feedback
+        return feedback
 
 
 def main():
